@@ -1,0 +1,219 @@
+import zipfile
+
+# Código HTML listo para guardar en archivo
+html_code = '''<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OurVerse 💌</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #faf7f0;
+      color: #4B3B2B;
+      margin: 0;
+      padding: 1rem;
+      line-height: 1.6;
+    }
+    header, footer {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #6D5A47;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.2rem;
+    }
+    section {
+      max-width: 900px;
+      margin: 0 auto 3rem auto;
+      padding: 1.5rem 1rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(75,59,43,0.15);
+    }
+    section h2 {
+      text-align: center;
+      color: #4B3B2B;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    section p {
+      text-align: center;
+      color: #5C4B3A;
+      font-size: 1.1rem;
+    }
+    ul {
+      max-width: 600px;
+      margin: 0 auto;
+      padding-left: 20px;
+      color: #5C4B3A;
+      font-size: 1.1rem;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+    ul li a {
+      color: #6D5A47;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    ul li a:hover {
+      text-decoration: underline;
+      color: #4B3B2B;
+    }
+    .poem-toggle {
+      max-width: 700px;
+      margin: 1rem auto;
+      background: #f9f5ee;
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(75,59,43,0.1);
+      transition: background-color 0.3s ease;
+      color: #4B3B2B;
+      font-weight: 600;
+      user-select: none;
+    }
+    .poem-toggle:hover {
+      background: #efe8d8;
+    }
+    .poem-content {
+      display: none;
+      margin-top: 0.8rem;
+      color: #5C4B3A;
+      font-weight: normal;
+      font-style: italic;
+      line-height: 1.4;
+    }
+    .poem-content p {
+      margin: 0;
+    }
+    .section p br {
+      line-height: 1.8;
+    }
+    .love-message {
+      max-width: 900px;
+      margin: 0 auto 3rem auto;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #b45a4a;
+      text-align: center;
+      font-family: 'Georgia', serif;
+      text-shadow: 1px 1px 2px #f4c2c2;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>OurVerse 💌</h1>
+  <p>Bienvenido a este rinconcito creado para nosotros.</p>
+</header>
+
+<section>
+  <h2>Dedicatoria ✨</h2>
+  <p>
+    Este espacio guarda palabras, recuerdos y momentos que nacieron de algo hermoso.<br>
+    Porque desde que llegaste a mi vida, entendí que el amor bonito sí existe.<br>
+    Y aunque no lo buscaba, tu cariño me curó el alma sin quererlo.
+  </p>
+</section>
+
+<section>
+  <h2>Poemas para ti 📖</h2>
+
+  <div class="poem-toggle" onclick="togglePoem(this)">
+    Poema 1: Amor Silencioso
+    <div class="poem-content">
+      <p>
+        Éramos solo amigos, o eso creíamos...<br>
+        Pero mi alma ya te hablaba bajito,<br>
+        con miedo, pero esperanza,<br>
+        de ser algo más que un suspiro compartido.
+      </p>
+    </div>
+  </div>
+
+  <div class="poem-toggle" onclick="togglePoem(this)">
+    Poema 2: Curaste mi Alma
+    <div class="poem-content">
+      <p>
+        Llegaste sin prometer, sin exigir,<br>
+        y con tu forma suave de mirar<br>
+        hiciste que mi alma dejara de doler.<br>
+        Amar ya no asusta... si es contigo.
+      </p>
+    </div>
+  </div>
+
+  <div class="poem-toggle" onclick="togglePoem(this)">
+    Poema 3: Nuestro Tiempo
+    <div class="poem-content">
+      <p>
+        Desde aquel 13 de marzo, algo cambió.<br>
+        Cada momento, cada apodo, cada mirada<br>
+        fue construyendo un nosotros que no sabía que quería...<br>
+        hasta que no pude imaginar sin ti.
+      </p>
+    </div>
+  </div>
+
+  <div class="poem-toggle" onclick="togglePoem(this)">
+    Poema 4: Y te amé
+    <div class="poem-content">
+      <p>
+        El 28 de junio no fue solo un día más.<br>
+        Fue el día que sin miedo, sin reservas<br>
+        mi corazón te dijo “te amo”...<br>
+        Y lo sigue gritando, sin parar.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Nuestras Canciones 🎶</h2>
+  <p>Estas canciones me hicieron pensarte, soñarte y amarte... desde el inicio.</p>
+
+  <ul>
+    <li><a href="https://youtu.be/7h2ryr_uUEs?si=ICmjanI4Bx-yafb_" target="_blank">Canción 1</a></li>
+    <li><a href="https://youtu.be/e1mOmdykmwI?si=UzzTqc0RCqvH20j8" target="_blank">Canción 2</a></li>
+    <li><a href="https://youtu.be/Mcj75l2gJcY?si=yuC9-3wxWLRLQnM8" target="_blank">Canción 3</a></li>
+    <li><a href="https://youtu.be/h0p8yTqj8i4?si=uzRrULSh-YbBcAl2" target="_blank">Canción 4</a></li>
+    <li><a href="https://youtu.be/ntdwWKaGaPQ?si=v-nlZEfH3XW8sd0P" target="_blank">Canción 5</a></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Una dedicatoria para ti 💖</h2>
+  <p>
+    Eres una de las personas más maravillosas que he tenido el privilegio de conocer.<br><br>
+
+    Gracias por existir, por ser luz en mis días, por tu ternura, por tu forma única de ver el mundo y por enseñarme que el amor puede ser suave, tranquilo y verdadero.<br><br>
+
+    Siempre podrás contar conmigo para todo. En lo bueno, en lo no tan bueno, en tus risas y en tus silencios. Estoy aquí, hoy y siempre.<br><br>
+
+    Te amo demasiado. Este regalo lo hice con cada pedacito de mi corazón, con la esperanza de que al recorrer estas palabras, estas memorias y estas canciones, sientas lo especial que eres para mí.<br><br>
+
+    Porque tú mereces todo lo bonito del universo... y más. ✨
+  </p>
+</section>
+
+<div class="love-message">
+  TE AMO CON TODA MI ALMA ❤️
+</div>
+
+<footer>
+  <p>Creado con amor por Keith 💕</p>
+</footer>
+
+<script>
+  function togglePoem(element) {
+    const content = element.querySelector('.poem-content');
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+    } else {
+      content.style.display = 'block';
