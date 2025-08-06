@@ -1,75 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OurVerse</title>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #fff7f3;
-      color: #5a3e36;
-      margin: 0;
-      padding: 0 1em;
-      line-height: 1.6;
-    }
-    header, footer {
-      text-align: center;
-      padding: 1em 0;
-    }
-    h1, h2 {
-      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    }
-    section {
-      margin: 2em 0;
-    }
-    .poem-toggle {
-      background-color: #fff0eb;
-      padding: 1em;
-      border-radius: 10px;
-      margin-bottom: 1em;
-      cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .poem-content {
-      display: none;
-      margin-top: 0.5em;
-    }
-    iframe {
-      width: 100%;
-      max-width: 560px;
-      height: 315px;
-      margin: 1em auto;
-      display: block;
-    }
-    video {
-      width: 100%;
-      max-width: 600px;
-      margin: 2em auto;
-      display: block;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    }
-    .love-message {
-      font-size: 1.5em;
-      text-align: center;
-      margin: 3em 0 1em;
-      font-weight: bold;
-    }
-  </style>
+
 </head>
 <body>
 
 <header>
   <h1>OurVerse 💌</h1>
-  <p>Bienvenid@ a este rinconcito creado para nosotros.</p>
+  <p>Bienvenido a este rinconcito creado para nosotros.</p>
 </header>
 
 <section>
   <h2>Dedicatoria ✨</h2>
   <p>
     Este espacio guarda palabras, recuerdos y momentos que nacieron de algo hermoso.  
-    Porque desde que llegaste, entendí que el amor bonito sí existe.  
+    Porque desde que llegaste a mi vida, entendí que el amor bonito sí existe.  
     Y aunque no lo buscaba, tu cariño me curó el alma sin quererlo.
   </p>
 </section>
@@ -157,12 +99,4 @@
   <p>Creado con amor por Keith 💕</p>
 </footer>
 
-<script>
-  function togglePoem(element) {
-    const content = element.querySelector('.poem-content');
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-  }
-</script>
 
-</body>
-</html>
