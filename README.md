@@ -17,7 +17,7 @@
 </section>
 
 <section>
-  <h2>Poemas Privados 📖</h2>
+  <h2>Poemas para ti 📖</h2>
 
   <div class="poem-toggle" onclick="togglePoem(this)">
     Poema 1: Amor Silencioso
@@ -81,14 +81,19 @@
   </ul>
 </section>
 
-<section>
-  <h2>Nuestro viaje en fotos... porque cada instante contigo es un tesoro 🎥</h2>
-  <video controls widt=¨100%>
-    <source 
-      src=¨Video Feliz Cumpleaños Collage Moderno Pastel_20250806_125609_000"
-    type=¨video/mp4=/>
-    Tu navegador no puede reproducir este video.
-  </video>
+<section class="section">
+  <h2>Una dedicatoria para ti 💖</h2>
+  <p>
+    Eres una de las personas más maravillosas que he tenido el privilegio de conocer.<br><br>
+
+    Gracias por existir, por ser luz en mis días, por tu ternura, por tu forma única de ver el mundo y por enseñarme que el amor puede ser suave, tranquilo y verdadero.<br><br>
+
+    Siempre podrás contar conmigo para todo. En lo bueno, en lo no tan bueno, en tus risas y en tus silencios. Estoy aquí, hoy y siempre.<br><br>
+
+    Te amo demasiado. Este regalo lo hice con cada pedacito de mi corazón, con la esperanza de que al recorrer estas palabras, estas memorias y estas canciones, sientas lo especial que eres para mí.<br><br>
+
+    Porque tú mereces todo lo bonito del universo... y más. ✨
+  </p>
 </section>
 
 <div class="love-message">
