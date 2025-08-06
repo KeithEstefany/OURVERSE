@@ -141,8 +141,10 @@
 
 <section>
   <h2>Nuestro viaje en fotos... porque cada instante contigo es un tesoro 🎥</h2>
-  <video controls>
-    <source Video Feliz Cumpleaños Collage Moderno Pastel_20250806_125609_000" />
+  <video controls widt=¨100%>
+    <source 
+      src=¨Video Feliz Cumpleaños Collage Moderno Pastel_20250806_125609_000"
+    type=¨video/mp4=/>
     Tu navegador no puede reproducir este video.
   </video>
 </section>
